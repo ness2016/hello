@@ -5,3 +5,4 @@ while i <=len(nums):
     a=a+nums[i]
     i = i + 1
 b=a/len(nums)
+--
