@@ -13,4 +13,4 @@ while i < len(nums):
     i = i + 1
 b=c/len(nums)-1
 d=b**(1/2)
-print ("d=" + d)
+print ("d=" + str(d))
