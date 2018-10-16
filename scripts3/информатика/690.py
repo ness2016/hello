@@ -10,26 +10,27 @@ v=800
 #коэффициент сопротивления
 k=0.3251
 # Шаг вычисления
-dt=0.001
+dt=0.0001
 #переменные
 x=0 #x
 y=0 #y
 
-a=float(input (" Угол стрельбы 5-85:"))
+a=float(input ())
 
 vx=v*math.cos(math.radians( a )) #горизонтальная скорость
 vy=v*math.sin(math.radians( a )) #вертикальная скорость
 
-if a<5 or a>85:
-    print(" Угол стрельбы должен быть 5-85")
-else:
-    
-    while 1==1:
-        vx = vx-k/m*vx*dt
-        vy = vy-(g+k/m*vy)*dt
-        x  = x+vx*dt
-        y  = y+vy*dt
-        if y<=0:
-            print(int(round(x)))
-            break
+if a<5:
+    a=5
+elif a>85:
+    a=85
+  
+while 1==1:
+    vx = vx-k/m*vx*dt
+    vy = vy-(g+k/m*vy)*dt
+    x  = x+vx*dt
+    y  = y+vy*dt
+    if y<=0:
+        print(int(round(x)))
+        break
             

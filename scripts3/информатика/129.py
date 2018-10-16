@@ -1,2 +1,2 @@
-A=int(input("First value:"))
+A=int(input())
 print (format(A,"b").zfill(8))
