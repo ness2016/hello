@@ -1,6 +1,2 @@
 # hello
-myhello
-20180522
-20180823
-One more test
-Authorisation problem
+Scripts and projects on python
