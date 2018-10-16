@@ -8,9 +8,9 @@ m=9.6
 #начальная скорость
 v=800
 #коэффициент сопротивления
-k=0.3251
+k=0.0008137
 # Шаг вычисления
-dt=0.0001
+dt=0.00025
 #переменные
 x=0 #x
 y=0 #y
@@ -26,10 +26,12 @@ elif a>85:
     a=85
   
 while 1==1:
-    vx = vx-k/m*vx*dt
-    vy = vy-(g+k/m*vy)*dt
-    x  = x+vx*dt
-    y  = y+vy*dt
+    vxx=vx
+    vyy=vy
+    vx = vx-k*vx*math.sqrt(vx*vx+vy*vy)*dt/m
+    vy = vy-(g+k*vy*math.sqrt(vx*vx+vy*vy)/m)*dt
+    x  = x+(vx+vxx)*dt/2
+    y  = y+(vy+vyy)*dt/2
     if y<=0:
         print(int(round(x)))
         break
