@@ -30,6 +30,6 @@ else:
         x  = x+vx*dt
         y  = y+vy*dt
         if y<=0:
-            print("Текущая дальность: "+str(int(round(x)))+" метров")
+            print(int(round(x)))
             break
             
