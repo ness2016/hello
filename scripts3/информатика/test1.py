@@ -3,9 +3,9 @@ def f(k):
 x1=int(input ('введите x1 = '))
 x2=int(input ('введите x2 = '))
 i=x1-1
-if x1<x2:
+if (x1<x2) and (x2-x1<=10):
     while i<x2:
         i=i+1
-        print (f(i))
+        print ('абсцисса = ' + str(i) + ' ордината = ' + str(f(i)))
 else:
     print ('введите правильные числа')
