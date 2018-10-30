@@ -3,6 +3,9 @@ def f(k):
 x1=int(input ('введите x1 = '))
 x2=int(input ('введите x2 = '))
 i=x1
-while i<x2:
-    i=i+1
-    print (f(i))
+if x1<x2:
+    while i<x2:
+        i=i+1
+        print (f(i))
+else:
+    print ('введите правильные числа')
