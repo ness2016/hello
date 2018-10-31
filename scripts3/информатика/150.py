@@ -1,15 +1,14 @@
 n=int(input ('введите число '))
-m=0
-f=0
+find=False
 if n<=1028:
-    for x in range (0,10):
+    for x in range (0,11):
         i=x**3
         m=(n-i)**(1/3)
-        f=round(m)
-        if m==f:
-            print (m,i)
-        else:
-            print ('inpossible')
+        if m.is_integer():
+            print (int(m),x)
+            find=True
+            break
+    if not find :    
+        print ('impossible')
 else:
     print ('введите правильные числа')
-    
