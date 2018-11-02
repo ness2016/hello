@@ -5,49 +5,54 @@ h=0
 r=0
 d=0
 e=0
+k=0
+p=0
+m1=m
 if m<=2*1000000000:
     while m%2==0:
         m=m/2
         i=i+1
-    print (i)
     while m%3==0:
         m=m/3
         j=j+1
-    print (j)
     while m%5==0:
         m=m/5
         h=h+1
-    print (h)
     while m%7==0:
         m=m/7
         r=r+1
-    print (r)
+    while m%11==0:
+        m=m/11
+        k=k+1
+    while m%13==0:
+        m=m/13
+        p=p+1
     if i%2==0:
-        d=i*i
+        d=d+2**i
     else:
-        e=e+i*i
-    print (e)
-    print (d)
+        e=e+2
     if j%2==0:
-        d=d+j*j*j
+        d=d+3**j
     else:
-        e=e+j*j*j
-    print (e)
-    print (d)
+        e=e+3
     if h%2==0:
-        d=d+h*h*h*h*h
+        d=d+5**h
     else:
-        e=e+h*h*h*h*h
-    print (e)
-    print (d)
+        e=e+5
     if r%2==0:
-        d=d+r*r*r*r*r*r*r*r
+        d=d+7**r
     else:
-        e=e+r*r*r*r*r*r*r*r
-    print (e)
-    print (d)
-    s=m/e
-    print (s)
+        e=e+7
+    if k%2==0:
+        d=d+11**k
+    else:
+        k=k+11
+    if p%2==0:
+        d=d+13**p
+    else:
+        e=e+13
+    s=round(m1/int(e))
+    print ('максимальное количество людей в полку = '+str(s))
 else:
     print ('введите правильные числа')
 
