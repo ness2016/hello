@@ -4,6 +4,7 @@ c = 12001
 b = 12001
 for i in range (n):
     a.append(int(input()))
+
 for i in range (n):
     for j in range (i,n):
         if (a[i]+a[j])%144==0 and a[i]<a[j]:
